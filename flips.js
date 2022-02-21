@@ -13,4 +13,6 @@ else {
         num = 1;
     }
 }
-console.log(defaultExport.coinFlips(num));
+let flips = defaultExport.coinFlips(num);
+console.log(flips);
+console.log(defaultExport.countFlips(flips));
