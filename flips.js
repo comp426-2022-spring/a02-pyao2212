@@ -1,4 +1,4 @@
-import defaultExport from "./modules/coin.mjs";
+/*import defaultExport from "./modules/coin.mjs";
 import process from "process";
 
 let args = process.argv;
@@ -15,4 +15,15 @@ else {
 }
 let flips = defaultExport.coinFlips(num);
 console.log(flips);
-console.log(defaultExport.countFlips(flips));
+console.log(defaultExport.countFlips(flips));*/
+import { coinFlips, countFlips } from "./modules/coin.mjs";
+import minimist from "minimist";
+
+const args = minimist(process.argv.slice(2));
+const number = args.number || 1;
+
+let flips = coinFlips(number)
+
+console.log(flips);
+console.log(countFlips(flips));
+
