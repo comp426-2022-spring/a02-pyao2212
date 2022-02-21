@@ -1,4 +1,4 @@
-import coinFlips from "./modules/coin.mjs";
+import defaultExport from "./modules/coin.mjs";
 const process = require("process");
 let num;
 if (process.argv.length <= 2) {
@@ -7,4 +7,5 @@ if (process.argv.length <= 2) {
 else {
     num = process.argv[2];
 }
-console.log(coinFlips(num));
+let func = defaultExport.coinFlips;
+console.log(func(num));
