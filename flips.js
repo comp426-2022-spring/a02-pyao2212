@@ -1,5 +1,5 @@
 import defaultExport from "./modules/coin.mjs";
-const process = require("process");
+const process = import("process");
 let num;
 if (process.argv.length <= 2) {
     num = 1;
