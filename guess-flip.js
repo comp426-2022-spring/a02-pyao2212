@@ -6,7 +6,7 @@ const call = args.call || "backup";
 if (call == "backup") {
     console.error("Error: no input.\nUsage: node guess-flip --call=[heads|tails]");
 } else if (call != "heads" && call != "tails") {
-    console.error("Usage: node guess-flip --call=[heads|tails]")
+    console.log("Usage: node guess-flip --call=[heads|tails]")
 } else {
     const check = defaultExport.coinFlip();
     let won = "lose";
