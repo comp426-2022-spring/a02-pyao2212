@@ -3,19 +3,20 @@ import minimist from "minimist";
 
 const args = minimist(process.argv.slice(2));
 const call = args.call || "backup";
-console.log(call);
-if (!(call == "tails" ) && !(call == "heads")) {
-    throw "Error \n Usage: node guess-flip --call=[heads|tails]";
+if (call == "backup") {
+    console.error("Error: no input.\nUsage: node guess-flip --call=[heads|tails]");
+} else if (call != "heads" && call != "tails") {
+    console.error("Usage: node guess-flip --call=[heads|tails]")
+} else {
+    const check = defaultExport.coinFlip();
+    let won = "lose";
+    if (check == call) {
+        won = "win";
+    }
+    let result = {
+        call: call,
+        flip: check,
+        result: won
+    };
+    console.log(result);
 }
-
-const check = defaultExport.coinFlip();
-let won = "lose";
-if (check == call) {
-    won = "win";
-}
-let result = {
-    call: call,
-    flip: check,
-    result: won
-};
-console.log(result);
