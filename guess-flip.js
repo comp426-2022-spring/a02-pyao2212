@@ -5,9 +5,11 @@ const args = minimist(process.argv.slice(2));
 const call = args.call || "backup";
 if (call == "backup") {
     console.error("Error: no input.\nUsage: node guess-flip --call=[heads|tails]");
-} else if (call != "heads" && call != "tails") {
+} 
+else if (call != "heads" && call != "tails") {
     console.log("Usage: node guess-flip --call=[heads|tails]")
-} else {
+} 
+else {
     const check = defaultExport.coinFlip();
     let won = "lose";
     if (check == call) {
