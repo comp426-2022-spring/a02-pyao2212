@@ -16,5 +16,3 @@ if (flips.length == 1) {
 }
 console.log(flips);
 console.log(sum);
-
-
